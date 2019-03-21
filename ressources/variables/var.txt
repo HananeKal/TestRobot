@@ -1,0 +1,15 @@
+*** Variables ***
+
+${URL}                 https://www.amazon.fr/
+${BROWSER}             Chrome
+${PRODUCT}             Xiaomi Mi Band 3
+${EMAIL}               hanane.kalkha@gmail.com
+${PASSWORD}            123456
+${MESSAGE}             Bonjour Hanane
+
+${FORM_NAME}           hanane
+${FORM_EMAIL}          hanane.kalkha89@gmail.com
+${FORM_PASSWORD}       123456
+${CONFIRM_PASSWORD}    123456
+
+

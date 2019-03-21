@@ -1,0 +1,26 @@
+*** Settings ***
+Library                        SeleniumLibrary
+Resource                       ../variables/var.txt
+Resource                       ../variables/locator.txt
+
+
+*** Keywords ***
+Open amazon browser
+                               Open Browser                      ${URL}                    ${BROWSER}
+
+Click on account menu
+                               Click Element                     ${XPATH_ACCOUNT_MENU}
+
+Input email
+                               [Arguments]                       ${email}
+
+
+                               Input Text                        ${XPATH_EMAIL}            ${email}
+Input the password
+                               [Arguments]                       ${password}
+                               SeleniumLibrary.Input Password    ${XPATH_PASSWORD}         ${PASSWORD}
+Click submit
+                               Click Element                     ${XPATH_SUBMIT_BUTTON}
+The user store should opned
+                               Wait Until Page Contains          ${MESSAGE}
+

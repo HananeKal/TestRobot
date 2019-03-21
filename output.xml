@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190320 10:39:29.162" generator="Robot 3.1.1 (Python 2.7.15 on win32)">
+<suite source="C:\Users\Hkalkha\robot-framework\AmazonTest" id="s1" name="AmazonTest">
+<suite source="C:\Users\Hkalkha\robot-framework\AmazonTest\suites_tests" id="s1-s1" name="Suites Tests">
+<suite source="C:\Users\Hkalkha\robot-framework\AmazonTest\suites_tests\manage_invalid_connect.robot" id="s1-s1-s1" name="Manage Invalid Connect">
+<kw type="setup" name="Open amazon browser" library="manage_connect">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190320 10:39:30.368" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.fr/'.</msg>
+<status status="PASS" endtime="20190320 10:40:11.471" starttime="20190320 10:39:30.367"></status>
+</kw>
+<status status="PASS" endtime="20190320 10:40:11.715" starttime="20190320 10:39:30.354"></status>
+</kw>
+<test id="s1-s1-s1-t1" name="Invalid Password">
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>invalid</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.fr/ap/signin</arg>
+</arguments>
+<msg timestamp="20190320 10:40:11.723" level="INFO">Opening url 'https://www.amazon.fr/ap/signin'</msg>
+<status status="PASS" endtime="20190320 10:40:33.983" starttime="20190320 10:40:11.722"></status>
+</kw>
+<kw name="Input email" library="manage_connect">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190320 10:40:34.001" level="INFO">Typing text 'hanane.kalkha@gmail.com' into text field '//*[@id="ap_email"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 10:40:34.499" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190320 10:40:34.500" starttime="20190320 10:40:34.047"></status>
+</kw>
+<msg timestamp="20190320 10:40:35.566" level="FAIL">Element with locator '//*[@id="ap_email"]' not found.</msg>
+<status status="FAIL" endtime="20190320 10:40:35.567" starttime="20190320 10:40:34.000"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:35.568" starttime="20190320 10:40:33.987"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:35.569" starttime="20190320 10:40:11.719"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:35.572" critical="yes" starttime="20190320 10:40:11.716">Element with locator '//*[@id="ap_email"]' not found.</status>
+</test>
+<test id="s1-s1-s1-t2" name="Invalid Email And Password">
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>invalid</arg>
+<arg>whatever</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.fr/ap/signin</arg>
+</arguments>
+<msg timestamp="20190320 10:40:35.584" level="INFO">Opening url 'https://www.amazon.fr/ap/signin'</msg>
+<status status="PASS" endtime="20190320 10:40:36.123" starttime="20190320 10:40:35.582"></status>
+</kw>
+<kw name="Input email" library="manage_connect">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190320 10:40:36.131" level="INFO">Typing text 'invalid' into text field '//*[@id="ap_email"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 10:40:36.534" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190320 10:40:36.535" starttime="20190320 10:40:36.157"></status>
+</kw>
+<msg timestamp="20190320 10:40:36.539" level="FAIL">Element with locator '//*[@id="ap_email"]' not found.</msg>
+<status status="FAIL" endtime="20190320 10:40:36.540" starttime="20190320 10:40:36.129"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:36.541" starttime="20190320 10:40:36.124"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:36.542" starttime="20190320 10:40:35.579"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:36.544" critical="yes" starttime="20190320 10:40:35.575">Element with locator '//*[@id="ap_email"]' not found.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Empty Email">
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.fr/ap/signin</arg>
+</arguments>
+<msg timestamp="20190320 10:40:36.551" level="INFO">Opening url 'https://www.amazon.fr/ap/signin'</msg>
+<status status="PASS" endtime="20190320 10:40:37.166" starttime="20190320 10:40:36.550"></status>
+</kw>
+<kw name="Input email" library="manage_connect">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190320 10:40:37.171" level="INFO">Typing text '' into text field '//*[@id="ap_email"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 10:40:37.566" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190320 10:40:37.567" starttime="20190320 10:40:37.194"></status>
+</kw>
+<msg timestamp="20190320 10:40:37.569" level="FAIL">Element with locator '//*[@id="ap_email"]' not found.</msg>
+<status status="FAIL" endtime="20190320 10:40:37.570" starttime="20190320 10:40:37.169"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:37.571" starttime="20190320 10:40:37.167"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:37.573" starttime="20190320 10:40:36.548"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:37.574" critical="yes" starttime="20190320 10:40:36.546">Element with locator '//*[@id="ap_email"]' not found.</status>
+</test>
+<test id="s1-s1-s1-t4" name="Empty Password">
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.fr/ap/signin</arg>
+</arguments>
+<msg timestamp="20190320 10:40:37.582" level="INFO">Opening url 'https://www.amazon.fr/ap/signin'</msg>
+<status status="PASS" endtime="20190320 10:40:37.894" starttime="20190320 10:40:37.581"></status>
+</kw>
+<kw name="Input email" library="manage_connect">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190320 10:40:37.899" level="INFO">Typing text 'hanane.kalkha@gmail.com' into text field '//*[@id="ap_email"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 10:40:38.303" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190320 10:40:38.303" starttime="20190320 10:40:37.920"></status>
+</kw>
+<msg timestamp="20190320 10:40:38.306" level="FAIL">Element with locator '//*[@id="ap_email"]' not found.</msg>
+<status status="FAIL" endtime="20190320 10:40:38.307" starttime="20190320 10:40:37.897"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:38.308" starttime="20190320 10:40:37.895"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:38.309" starttime="20190320 10:40:37.579"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:38.311" critical="yes" starttime="20190320 10:40:37.576">Element with locator '//*[@id="ap_email"]' not found.</status>
+</test>
+<test id="s1-s1-s1-t5" name="Empty Email And Password">
+<kw name="Login With Invalid Credentials Should Fail">
+<arguments>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+</arguments>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.fr/ap/signin</arg>
+</arguments>
+<msg timestamp="20190320 10:40:38.320" level="INFO">Opening url 'https://www.amazon.fr/ap/signin'</msg>
+<status status="PASS" endtime="20190320 10:40:38.743" starttime="20190320 10:40:38.319"></status>
+</kw>
+<kw name="Input email" library="manage_connect">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${XPATH_EMAIL}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190320 10:40:38.747" level="INFO">Typing text '' into text field '//*[@id="ap_email"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190320 10:40:39.159" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190320 10:40:39.159" starttime="20190320 10:40:38.776"></status>
+</kw>
+<msg timestamp="20190320 10:40:39.162" level="FAIL">Element with locator '//*[@id="ap_email"]' not found.</msg>
+<status status="FAIL" endtime="20190320 10:40:39.163" starttime="20190320 10:40:38.746"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:39.164" starttime="20190320 10:40:38.744"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:39.165" starttime="20190320 10:40:38.315"></status>
+</kw>
+<status status="FAIL" endtime="20190320 10:40:39.166" critical="yes" starttime="20190320 10:40:38.313">Element with locator '//*[@id="ap_email"]' not found.</status>
+</test>
+<doc>A test suite containing tests related to invalid login.</doc>
+<status status="FAIL" endtime="20190320 10:40:39.170" starttime="20190320 10:39:29.328"></status>
+</suite>
+<status status="FAIL" endtime="20190320 10:40:39.267" starttime="20190320 10:39:29.320"></status>
+</suite>
+<status status="FAIL" endtime="20190320 10:40:39.282" starttime="20190320 10:39:29.254"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="5" pass="0">Critical Tests</stat>
+<stat fail="5" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="5" id="s1" name="AmazonTest" pass="0">AmazonTest</stat>
+<stat fail="5" id="s1-s1" name="Suites Tests" pass="0">AmazonTest.Suites Tests</stat>
+<stat fail="5" id="s1-s1-s1" name="Manage Invalid Connect" pass="0">AmazonTest.Suites Tests.Manage Invalid Connect</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,16 @@
+*** Variables ***
+
+${XPATH_INPUT_SEARCH}             //*[@id="twotabsearchtextbox"]
+${XPATH_BUTTON_SEARCH}            //*[@id="nav-search"]/form/div[2]/div/input
+
+${XPATH_ACCOUNT_MENU}             //*[@id=\"nav-link-yourAccount\"]
+${XPATH_EMAIL}                    //*[@id="ap_email"]
+${XPATH_PASSWORD}                 //*[@id="ap_password"]
+${XPATH_SUBMIT_BUTTON}            //*[@id="signInSubmit"]
+
+${XPATH_FORM_ACCOUNT_MENU}        //*[@id="nav-flyout-ya-newCust"]/a
+${XPATH_FORM_NAME}                //*[@id="ap_customer_name"]
+${XPATH_FORM_EMAIL}               //*[@id="ap_email"]
+${XPATH_FORM_PASSWORD}            //*[@id="ap_password"]
+${XPATH_FORM_CONFIRM_PASSWORD}    //*[@id="ap_password_check"]
+${XPATH_FORM_SUBMIT}              //*[@id="continue"]

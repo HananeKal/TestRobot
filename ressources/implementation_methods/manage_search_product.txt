@@ -1,0 +1,18 @@
+*** Settings ***
+Library    SeleniumLibrary    
+Resource    ../variables/locator.txt
+Resource    ../variables/var.txt
+
+*** Keywords ***
+Open Amazon Browser
+                                    Open Browser                     ${URL}                    ${BROWSER}
+Input product name
+                                    [Arguments]                      ${product}
+                                    Input Text                       ${XPATH_INPUT_SEARCH}     ${product}
+
+Click search button
+                                    Click Button                     ${XPATH_BUTTON_SEARCH}
+The results page should be opned
+                                    ${title}  Get Title
+                                    Should Contain    ${title}    ${product}   
+                                    Close Browser   

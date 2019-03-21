@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190321 10:23:54.498" generator="Robot 3.1.1 (Python 2.7.15 on win32)">
+<suite source="C:\Users\Hkalkha\robot-framework\AmazonTest\suites_tests\manage_connect.robot" id="s1" name="Manage Connect">
+<test id="s1-t1" name="Coonect to amazon">
+<kw name="Open amazon browser" library="manage_connect">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190321 10:23:54.925" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.fr/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190321 10:23:57.476" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" endtime="20190321 10:23:57.477" starttime="20190321 10:23:57.475"></status>
+</kw>
+<msg timestamp="20190321 10:23:57.482" level="FAIL">WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20190321 10:23:57.482" starttime="20190321 10:23:54.924"></status>
+</kw>
+<status status="FAIL" endtime="20190321 10:23:57.483" starttime="20190321 10:23:54.923"></status>
+</kw>
+<status status="FAIL" endtime="20190321 10:23:57.484" critical="yes" starttime="20190321 10:23:54.922">WebDriverException: Message: unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 6.1.7601 SP1 x86_64)
+</status>
+</test>
+<doc>The user test case is for connect to amazon</doc>
+<status status="FAIL" endtime="20190321 10:23:57.486" starttime="20190321 10:23:54.503"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Manage Connect" pass="0">Manage Connect</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
